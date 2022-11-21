@@ -1,0 +1,16 @@
+
+h1{
+    text-align: center;
+    color: #fa3838;
+}
+h2{
+    padding-left: 40px;
+    color: #eca0a0;
+}
+a{
+    text-decoration: none;
+    color: #a68282;
+}
+ul {
+   list-style: none;
+}
