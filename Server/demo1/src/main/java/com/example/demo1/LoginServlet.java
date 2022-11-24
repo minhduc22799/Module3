@@ -1,6 +1,8 @@
 package com.example.demo1;
 
 import java.io.*;
+import java.util.Date;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -18,9 +20,11 @@ public class LoginServlet extends HttpServlet {
         writer.println("<html>");
 
         if ("admin".equals(username) && "admin".equals(password)) {
-            writer.println("<h1>Welcome " + username + " to website</h1>");
+            req.setAttribute("loginTime", new Date());
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("index.jsp");
+            requestDispatcher.forward(req,resp);
         } else {
-            writer.println("<h1>Login Error</h1>");
+            resp.sendRedirect("login.jsp");
         }
 
         writer.println("</html>");

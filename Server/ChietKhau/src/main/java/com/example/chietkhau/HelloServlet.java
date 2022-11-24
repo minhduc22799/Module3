@@ -13,6 +13,7 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String des = req.getParameter("des");
         float price = Float.parseFloat(req.getParameter("price"));
         float discount = Float.parseFloat(req.getParameter("discount"));
         float discountPrice = price*discount/100;
@@ -20,6 +21,7 @@ public class HelloServlet extends HttpServlet {
 
         PrintWriter writer = resp.getWriter();
         writer.println("<html>");
+        writer.println("<h1>Description: " + des + "</h1>");
         writer.println("<h1>Discount Amount: " + discountPrice + "</h1>");
         writer.println("<h1>Discount Price: " + priceDiscount + "</h1>");
         writer.println("</html>");
