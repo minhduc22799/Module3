@@ -4,6 +4,7 @@
 <head>
   <title>Edit customer</title>
 </head>
+<body>
 <h1>Edit customer</h1>
 <p>
   <c:if test='${requestScope["message"] != null}'>
