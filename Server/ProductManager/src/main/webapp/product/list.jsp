@@ -8,8 +8,9 @@
     a{
         text-decoration: none;
         color: black;
-        font-weight: bold;
+
     }
+
 </style>
 <body>
 <h1>Products</h1>
@@ -18,12 +19,12 @@
 </p>
 <table border="1">
     <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Category</td>
-        <td>Price</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <c:forEach items='${requestScope["products"]}' var="product">
         <tr>
